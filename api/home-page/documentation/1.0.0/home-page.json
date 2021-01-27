@@ -1,0 +1,901 @@
+{
+  "paths": {
+    "/home-page": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the home-page's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve home-page document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Home-page"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single home-page record",
+        "responses": {
+          "200": {
+            "description": "Retrieve home-page document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Home-page"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewHome-page"
+              }
+            }
+          }
+        },
+        "parameters": []
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single home-page record",
+        "responses": {
+          "200": {
+            "description": "deletes a single home-page based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Home-page"
+        ],
+        "parameters": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Home-page": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "topbar_contact_number": {
+            "type": "string",
+            "default": "+63"
+          },
+          "topbar_email": {
+            "type": "string",
+            "default": "hildebrand11@gmail.com"
+          },
+          "isSiteLogo": {
+            "type": "boolean",
+            "default": false
+          },
+          "intro_header_description": {
+            "type": "string",
+            "default": "Write something in about this line. Make most out of it. - Hildebrand"
+          },
+          "about_header_title": {
+            "type": "string",
+            "default": "Write something on this about header title."
+          },
+          "about_header_subtitle": {
+            "type": "string",
+            "default": "Write something on this about header subtitle."
+          },
+          "services_description": {
+            "type": "string",
+            "default": "Write something in this services description. Something unique."
+          },
+          "client_description": {
+            "type": "string",
+            "default": "Write something in this clients description."
+          },
+          "portfolio_description": {
+            "type": "string"
+          },
+          "contact_description": {
+            "type": "string"
+          },
+          "google_map_location_link": {
+            "type": "string"
+          },
+          "about_bullet": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "bullet_1": {
+                "type": "string"
+              },
+              "bullet_2": {
+                "type": "string"
+              },
+              "bullet_3": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "client_carousel_image": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "carousel_1": {
+                "type": "string"
+              },
+              "carousel_2": {
+                "type": "string"
+              },
+              "carousel_3": {
+                "type": "string"
+              },
+              "carousel_4": {
+                "type": "string"
+              },
+              "carousel_5": {
+                "type": "string"
+              },
+              "carousel_6": {
+                "type": "string"
+              },
+              "carousel_7": {
+                "type": "string"
+              },
+              "carousel_8": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "contact_item": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "address_info": {
+                "type": "string"
+              },
+              "phone_num_info": {
+                "type": "string"
+              },
+              "email_info": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "intro_button": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "button_1": {
+                "type": "string"
+              },
+              "button_2": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "intro_carousel_image": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "carousel_1": {
+                "type": "string"
+              },
+              "carousel_2": {
+                "type": "string"
+              },
+              "carousel_3": {
+                "type": "string"
+              },
+              "carousel_4": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "portfolio_item": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "item_title_1": {
+                "type": "string"
+              },
+              "item_image_1": {
+                "type": "string"
+              },
+              "item_title_2": {
+                "type": "string"
+              },
+              "item_image_2": {
+                "type": "string"
+              },
+              "item_title_3": {
+                "type": "string"
+              },
+              "item_image_3": {
+                "type": "string"
+              },
+              "item_title_4": {
+                "type": "string"
+              },
+              "item_image_4": {
+                "type": "string"
+              },
+              "item_title_5": {
+                "type": "string"
+              },
+              "item_image_5": {
+                "type": "string"
+              },
+              "item_title_6": {
+                "type": "string"
+              },
+              "item_image_6": {
+                "type": "string"
+              },
+              "item_title_7": {
+                "type": "string"
+              },
+              "item_image_7": {
+                "type": "string"
+              },
+              "item_title_8": {
+                "type": "string"
+              },
+              "item_image_8": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "services_icon_with_text": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title_1": {
+                "type": "string"
+              },
+              "description_1": {
+                "type": "string"
+              },
+              "title_2": {
+                "type": "string"
+              },
+              "description_2": {
+                "type": "string"
+              },
+              "title_3": {
+                "type": "string"
+              },
+              "description_3": {
+                "type": "string"
+              },
+              "title_4": {
+                "type": "string"
+              },
+              "description_4": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "social_media_link": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "twitter_link": {
+                "type": "string"
+              },
+              "google_link": {
+                "type": "string"
+              },
+              "facebook_link": {
+                "type": "string"
+              },
+              "instagram_link": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "team_items": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "position": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "twitter_url": {
+                "type": "string"
+              },
+              "facebook_url": {
+                "type": "string"
+              },
+              "google_url": {
+                "type": "string"
+              },
+              "linkedin_url": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "testimonials_items": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "job": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "testimonial_image": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "testimonials_description": {
+            "type": "string"
+          },
+          "about_img": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewHome-page": {
+        "properties": {
+          "topbar_contact_number": {
+            "type": "string",
+            "default": "+63"
+          },
+          "topbar_email": {
+            "type": "string",
+            "default": "hildebrand11@gmail.com"
+          },
+          "isSiteLogo": {
+            "type": "boolean",
+            "default": false
+          },
+          "intro_header_description": {
+            "type": "string",
+            "default": "Write something in about this line. Make most out of it. - Hildebrand"
+          },
+          "about_header_title": {
+            "type": "string",
+            "default": "Write something on this about header title."
+          },
+          "about_header_subtitle": {
+            "type": "string",
+            "default": "Write something on this about header subtitle."
+          },
+          "services_description": {
+            "type": "string",
+            "default": "Write something in this services description. Something unique."
+          },
+          "client_description": {
+            "type": "string",
+            "default": "Write something in this clients description."
+          },
+          "portfolio_description": {
+            "type": "string"
+          },
+          "contact_description": {
+            "type": "string"
+          },
+          "google_map_location_link": {
+            "type": "string"
+          },
+          "about_bullet": {
+            "type": "string"
+          },
+          "client_carousel_image": {
+            "type": "string"
+          },
+          "contact_item": {
+            "type": "string"
+          },
+          "intro_button": {
+            "type": "string"
+          },
+          "intro_carousel_image": {
+            "type": "string"
+          },
+          "portfolio_item": {
+            "type": "string"
+          },
+          "services_icon_with_text": {
+            "type": "string"
+          },
+          "social_media_link": {
+            "type": "string"
+          },
+          "team_items": {
+            "type": "string"
+          },
+          "testimonials_items": {
+            "type": "string"
+          },
+          "testimonials_description": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}

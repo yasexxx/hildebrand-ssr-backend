@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services_icon_with_texts",
+  "info": {
+    "name": "ServicesIconWithText",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title_1": {
+      "type": "string",
+      "default": "Title1"
+    },
+    "description_1": {
+      "type": "text"
+    },
+    "title_2": {
+      "type": "string"
+    },
+    "description_2": {
+      "type": "text"
+    },
+    "title_3": {
+      "type": "string"
+    },
+    "description_3": {
+      "type": "text"
+    },
+    "title_4": {
+      "type": "string"
+    },
+    "description_4": {
+      "type": "text"
+    }
+  }
+}

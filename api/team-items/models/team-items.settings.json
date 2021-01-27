@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_items",
+  "info": {
+    "name": "TeamItems",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "Chief_Executive_Officer",
+        "Product_Manager",
+        "CTO",
+        "Accountant"
+      ]
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "twitter_url": {
+      "type": "string"
+    },
+    "facebook_url": {
+      "type": "string"
+    },
+    "google_url": {
+      "type": "string"
+    },
+    "linkedin_url": {
+      "type": "string"
+    }
+  }
+}

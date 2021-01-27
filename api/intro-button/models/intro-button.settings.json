@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "intro_buttons",
+  "info": {
+    "name": "IntroButton"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "button_1": {
+      "type": "string",
+      "default": "Get Started"
+    },
+    "button_2": {
+      "type": "string",
+      "default": "Watch Video"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonials_items",
+  "info": {
+    "name": "TestimonialsItems"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "job": {
+      "type": "enumeration",
+      "enum": [
+        "designer",
+        "storeOwner",
+        "freelancer",
+        "entrepreneur",
+        "gamer",
+        "ceoAndFounder",
+        "programmer",
+        "developer"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "testimonial_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

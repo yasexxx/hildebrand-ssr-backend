@@ -1,0 +1,41 @@
+{
+  "name": "backend-reveal",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Backend server logic for frontend built in angular framework.",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "production": "cross-env NODE_ENV=production npm run build --clean && cross-env NODE_ENV=production npm start",
+    "strapi": "strapi"
+  },
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^4.4.0"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "strapi": "3.4.3",
+    "strapi-admin": "3.4.3",
+    "strapi-connector-mongoose": "3.4.3",
+    "strapi-plugin-content-manager": "3.4.3",
+    "strapi-plugin-content-type-builder": "3.4.3",
+    "strapi-plugin-documentation": "^3.4.3",
+    "strapi-plugin-email": "3.4.3",
+    "strapi-plugin-upload": "3.4.3",
+    "strapi-plugin-users-permissions": "3.4.3",
+    "strapi-provider-upload-cloudinary": "^3.4.5",
+    "strapi-utils": "3.4.3"
+  },
+  "author": {
+    "name": "Hildebrand Elias Ligtas"
+  },
+  "strapi": {
+    "uuid": "f87b0698-fd4d-44d9-be41-2e92b2a77b4c"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,100 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "name": "HomePage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "topbar_contact_number": {
+      "type": "string",
+      "default": "+63"
+    },
+    "topbar_email": {
+      "type": "email",
+      "default": "hildebrand11@gmail.com"
+    },
+    "isSiteLogo": {
+      "type": "boolean",
+      "default": false
+    },
+    "intro_header_description": {
+      "type": "text",
+      "default": "Write something in about this line. Make most out of it. - Hildebrand"
+    },
+    "about_header_title": {
+      "type": "string",
+      "default": "Write something on this about header title."
+    },
+    "about_header_subtitle": {
+      "type": "text",
+      "default": "Write something on this about header subtitle."
+    },
+    "services_description": {
+      "type": "text",
+      "default": "Write something in this services description. Something unique."
+    },
+    "client_description": {
+      "type": "text",
+      "default": "Write something in this clients description."
+    },
+    "portfolio_description": {
+      "type": "text"
+    },
+    "contact_description": {
+      "type": "text"
+    },
+    "google_map_location_link": {
+      "type": "string"
+    },
+    "about_bullet": {
+      "model": "about-bullets"
+    },
+    "client_carousel_image": {
+      "model": "client-carousel-image"
+    },
+    "contact_item": {
+      "model": "contact-items"
+    },
+    "intro_button": {
+      "model": "intro-button"
+    },
+    "intro_carousel_image": {
+      "model": "intro-carousel-images"
+    },
+    "portfolio_item": {
+      "model": "portfolio-items"
+    },
+    "services_icon_with_text": {
+      "model": "services-icon-with-text"
+    },
+    "social_media_link": {
+      "model": "social-media-links"
+    },
+    "team_items": {
+      "collection": "team-items"
+    },
+    "testimonials_items": {
+      "collection": "testimonials-items"
+    },
+    "testimonials_description": {
+      "type": "text"
+    },
+    "about_img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

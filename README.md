@@ -1,2 +1,3 @@
-# hildebrand-ssr-backend
-A simple backend cms
+# Strapi application
+
+A quick description of your strapi application

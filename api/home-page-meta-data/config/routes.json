@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/home-page-meta-data",
+      "handler": "home-page-meta-data.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/home-page-meta-data",
+      "handler": "home-page-meta-data.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/home-page-meta-data",
+      "handler": "home-page-meta-data.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

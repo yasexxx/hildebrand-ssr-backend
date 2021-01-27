@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_bullets",
+  "info": {
+    "name": "AboutBullets"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "bullet_1": {
+      "type": "text",
+      "default": "Write something in this about bullet 1 section."
+    },
+    "bullet_2": {
+      "type": "text",
+      "default": "Write something in this about bullet 2 section."
+    },
+    "bullet_3": {
+      "type": "text",
+      "default": "Write something in this about bullet 3 section."
+    }
+  }
+}

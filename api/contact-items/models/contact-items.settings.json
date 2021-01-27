@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_items",
+  "info": {
+    "name": "ContactItems",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "address_info": {
+      "type": "string"
+    },
+    "phone_num_info": {
+      "type": "string"
+    },
+    "email_info": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_page_meta_data",
+  "info": {
+    "name": "HomePage MetaData"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "meta_title": {
+      "type": "string",
+      "default": "Hildebrand"
+    },
+    "metaName_keyword_content": {
+      "type": "string"
+    },
+    "meta_description_content": {
+      "type": "text"
+    },
+    "meta_robots_content": {
+      "type": "string"
+    },
+    "meta_og_url": {
+      "type": "string"
+    },
+    "meta_og_site_name": {
+      "type": "string"
+    },
+    "meta_twitter_domain": {
+      "type": "string"
+    },
+    "meta_twitter_title": {
+      "type": "string"
+    },
+    "meta_twitter_description": {
+      "type": "text"
+    },
+    "twitter_image_src": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "isMeta": {
+      "type": "boolean"
+    }
+  }
+}

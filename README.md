@@ -1,3 +1,5 @@
 # A backend cms service
 
-A quick description of your strapi application
+A node backend implementation with CMS feature. Easy integration of API, fast update content and views, and less hassle for developer.
+
+
